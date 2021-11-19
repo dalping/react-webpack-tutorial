@@ -44,9 +44,9 @@ module.exports = {
         filename: 'app.js',
     }, // 출력
     devServer: {
-        static: {directory: path.resolve(__dirname,'public')},
+        static: { directory: path.resolve(__dirname,'public') }, //실제로 존재하는 정적 파일들의 경로
+        devMiddleware: { publicPath:'/dist/' },
         port: 8080,
-        devMiddleware: {publicPath:'/dist/'},
         hot: true,
     },
 };
